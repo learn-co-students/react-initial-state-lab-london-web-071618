@@ -10,18 +10,20 @@ export default class Bomb extends Component {
   }
 
   render () {
-    if (this.state.secondsLeft === 0) {
-      return (
-        <p>
-          Boom!
-        </p>
-      )
-    } else {
-      return (
-        <p>
-          {this.state.secondsLeft} seconds left before I go boom!
-        </p>
-      )
-    }
+    return (this.state.secondsLeft === 0 ? (<p>Boom!</p>) : (<p>{this.state.secondsLeft} seconds left before I go boom!</p>))
+
+  //   if (this.state.secondsLeft === 0) {
+  //     return (
+  //       <p>
+  //         Boom!
+  //       </p>
+  //     )
+  //   } else {
+  //     return (
+  //       <p>
+  //         {this.state.secondsLeft} seconds left before I go boom!
+  //       </p>
+  //     )
+  //   }
   }
 }
